@@ -126,6 +126,12 @@ for transaction in transactions_clean:
     sales.append(transaction[1])
     thread_sold.append(transaction[2])
 
-print(customers)
-print(sales)
-print(thread_sold)
+# print(customers)
+# print(sales)
+# print(thread_sold)
+
+total_sales = 0
+for sale in sales:
+    sale_without_ds = sale.strip('$')
+    total_sales += float(sale_without_ds)
+print(total_sales)
