@@ -141,4 +141,18 @@ for colors in thread_sold:
     colors_split = colors.split('&')
     for color in colors_split:
         colors_sold_split.append(color)
-print(colors_sold_split)
+# print(colors_sold_split)
+
+
+def color_count(color):
+    count = 0
+    for color_name in colors_sold_split:
+        if color_name == color:
+            count += 1
+    return count
+
+
+colors = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
+for color in colors:
+    print('The {} color has been sold {} times today!'.format(
+        color, color_count(color)))
