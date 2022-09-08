@@ -134,4 +134,11 @@ total_sales = 0
 for sale in sales:
     sale_without_ds = sale.strip('$')
     total_sales += float(sale_without_ds)
-print(total_sales)
+# print(total_sales)
+
+colors_sold_split = []
+for colors in thread_sold:
+    colors_split = colors.split('&')
+    for color in colors_split:
+        colors_sold_split.append(color)
+print(colors_sold_split)
